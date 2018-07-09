@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/datapush/datapush.iml" filepath="$PROJECT_DIR$/library/datapush/datapush.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/facerecognition/facerecognition.iml" filepath="$PROJECT_DIR$/library/facerecognition/facerecognition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module/machinehelper/machinehelper.iml" filepath="$PROJECT_DIR$/module/machinehelper/machinehelper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module/module.iml" filepath="$PROJECT_DIR$/module/module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/facerecognition/pingan/pingan.iml" filepath="$PROJECT_DIR$/library/facerecognition/pingan/pingan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/router/router.iml" filepath="$PROJECT_DIR$/library/router/router.iml" />
+      <module fileurl="file://$PROJECT_DIR$/temp_attendance.iml" filepath="$PROJECT_DIR$/temp_attendance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/zxingwrapper/zxingwrapper.iml" filepath="$PROJECT_DIR$/library/zxingwrapper/zxingwrapper.iml" />
+    </modules>
+  </component>
+</project>

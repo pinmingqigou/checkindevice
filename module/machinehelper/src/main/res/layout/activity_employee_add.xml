@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include layout="@layout/title_bar_common_layout" />
+
+    <include
+        layout="@layout/exit_text_common_layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="120dp" />
+
+    <Button
+        android:id="@+id/bt_save_employee"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/selector_employee_add_button_bg"
+        android:text="保存"
+        android:textColor="#fff"
+        android:textSize="18sp" />
+
+</FrameLayout>

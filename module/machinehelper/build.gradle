@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion cfgs.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion cfgs.minSdkVersion
+        targetSdkVersion cfgs.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(library.router)
+    implementation project(library.zxing)
+    implementation project(library.pingan)
+    implementation project(library.datapush)
+    implementation(name: 'pafacepass-1.0.1', ext: 'aar')
+    implementation libs['support-v4']
+    implementation libs['appcompat-v7']
+    implementation libs['lifecycle_extensions']
+    implementation libs['room_runtime']
+    implementation libs['butterknife']
+    implementation libs['design']
+    implementation libs['cardview-v7']
+    implementation libs['round-image']
+    implementation libs['glide']
+    implementation libs['gson']
+    annotationProcessor libs['lifecycle_compiler']
+    annotationProcessor libs['room_compiler']
+    annotationProcessor libs['butterknife-compiler']
+
+}

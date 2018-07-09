@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "ryS5xwVLSi7J0iK2Spvve3",
+                GETUI_APP_KEY   : "WTLDDkZ6N29wK5CJRH4a6A",
+                GETUI_APP_SECRET: "lDww0jpI0I6t8CSU0xOMo2"
+        ]
+    }
+
+    buildTypes {
+        release {
+            postprocessing {
+                removeUnusedCode false
+                removeUnusedResources false
+                obfuscate false
+                optimizeCode false
+                proguardFile 'proguard-rules.pro'
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(library.router)
+    implementation libs['retrofit']
+    implementation libs['okhttp']
+    implementation libs['retrofit-converter']
+}

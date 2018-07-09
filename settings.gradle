@@ -1,0 +1,11 @@
+include ':app'
+
+//library
+include ':library:facerecognition:pingan'
+include ':library:router'
+include ':library:zxingwrapper'
+include ':library:datapush'
+
+//module
+include ':module:machinehelper'
+

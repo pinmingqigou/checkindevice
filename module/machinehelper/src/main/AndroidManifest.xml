@@ -1,0 +1,67 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.freeme.freemelite.attendance.machinehelper">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application android:allowBackup="true">
+
+        <!--activity start-->
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityCommonTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.WifiInfoShareActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityCommonTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".ui.activity.QRCodeActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityCommonTheme" />
+
+        <activity
+            android:name=".ui.activity.FaceRegistrationActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityCommonTheme" />
+
+        <activity
+            android:name=".ui.activity.FaceManagementActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityCommonTheme" />
+
+        <activity
+            android:name=".ui.activity.EmployeeManagementActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityCommonTheme" />
+
+        <activity
+            android:name=".ui.activity.EmployeeAddActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityCommonTheme" />
+
+        <activity
+            android:name=".ui.activity.SpecifiedEmployeeFaceRegistrationActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityCommonTheme" />
+
+        <!--activity end-->
+
+        <!--provider start-->
+        <provider
+            android:name=".dao.FaceProvider"
+            android:authorities="com.freeme.freemelite.attendance" />
+        <!--provider end-->
+    </application>
+</manifest>

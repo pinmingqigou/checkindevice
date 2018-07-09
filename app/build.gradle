@@ -1,0 +1,42 @@
+def androidManifest = new XmlSlurper().parse("${projectDir}/AndroidManifest.xml")
+def attendanceVersionName = (androidManifest['@android:versionName']).toString()
+def attendanceVersionCode = (androidManifest['@android:versionCode']).toInteger()
+
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion cfgs.compileSdkVersion
+    buildToolsVersion cfgs.buildToolsVersion
+    defaultConfig {
+        applicationId cfgs.applicationId
+        minSdkVersion cfgs.minSdkVersion
+        targetSdkVersion cfgs.targetSdkVersion
+        versionCode attendanceVersionCode
+        versionName attendanceVersionName
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(library.router)
+    implementation project(library.machinehelper)
+}

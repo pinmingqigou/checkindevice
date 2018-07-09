@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/title_bar_common_layout" />
+
+    <com.freeme.freemelite.attendance.machinehelper.ui.view.CircleFrameLayout
+        android:id="@+id/photo_container"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="90dp"
+        app:borderColor="#008fea"
+        app:borderwidth="5dp"
+        app:radius="150dp" />
+</FrameLayout>
